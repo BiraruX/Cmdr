@@ -36,13 +36,13 @@ return function(Cmdr)
 
 		if not command.Entry and not table.find(DefaultGroups, command.Group) then
 			Dispatcher:PushHistory(text)
-	
+
 			Window:DisableEntry()
-	
+
 			if not command then
 				Window:AddLine(errorCode)
 			end
-	
+
 			local ok, out = xpcall(function()
 				local valid, xpcallerrorText = command:Validate(true)
 
@@ -59,7 +59,7 @@ return function(Cmdr)
 				warn((`[Cmdr] Error occurred while evaluating command string %q\n{tostring(out)}`):format(text))
 			end
 
-			local line_2 = ok and out 
+			local line_2 = ok and out
 				or "An error occurred while running this command. Check the console for more information."
 
 			line.Text = line_2

@@ -179,10 +179,10 @@ function Dispatcher:Run(...): string
 		error(errorText) -- We do a full-on error here since this is code-invoked and they should know better.
 	end
 
-	local success, errorText = command:Validate(true)
+	local success, errorText_2 = command:Validate(true)
 
 	if not success then
-		error(errorText)
+		error(errorText_2)
 	end
 
 	return command:Run()

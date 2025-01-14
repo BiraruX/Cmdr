@@ -113,10 +113,10 @@ function Dispatcher:EvaluateAndRun(
 	end
 
 	local ok, out = xpcall(function()
-		local valid, errorText = command:Validate(true)
+		local valid, xpcallerrorText = command:Validate(true)
 
 		if not valid then
-			return errorText
+			return xpcallerrorText
 		end
 
 		return command:Run() or "Command executed."

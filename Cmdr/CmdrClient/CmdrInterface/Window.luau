@@ -195,6 +195,7 @@ function Window:LoseFocus(submit)
 			self:SetEntryText("")
 			self.ProcessEntry(text)
 		elseif submit then
+			Window:AddLine(Window:GetLabel() .. " " .. text, Color3.fromRGB(255, 223, 93))
 			self:AddLine(self._errorText, Color3.fromRGB(255, 153, 153))
 		end
 	end

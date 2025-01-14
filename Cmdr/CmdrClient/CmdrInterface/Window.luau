@@ -188,7 +188,7 @@ function Window:LoseFocus(submit)
 	elseif GuiService.MenuIsOpen and Gui.Visible then
 		self:Hide()
 	end
-	
+
 	if self.EntryAllowed then
 		if submit and self.Valid then
 			task.wait()

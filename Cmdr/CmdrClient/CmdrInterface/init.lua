@@ -4,6 +4,14 @@ local Players = game:GetService("Players")
 local Player = Players.LocalPlayer
 
 return function(Cmdr)
+	local DefaultGroups = {
+		"DefaultAdmin",
+		"DefaultDebug",
+		"DefaultUtil",
+		"UserAlias",
+	}
+	
+	local Dispatcher = Cmdr.Dispatcher
 	local Util = Cmdr.Util
 
 	local Window = require(script:WaitForChild("Window"))
@@ -19,14 +27,51 @@ return function(Cmdr)
 		if #text == 0 then
 			return
 		end
-
+		
+		local command, errorCode = Dispatcher:Evaluate(text, Player)
+		
 		Window:AddLine(Window:GetLabel() .. " " .. text, Color3.fromRGB(255, 223, 93))
-		Window:DisableEntry()
+		
+		local line = Window:AddLine("Processing...", Color3.fromRGB(200, 200, 200))
+		
+		if not command.Entry and not table.find(DefaultGroups, command.Group) then
+			Dispatcher:PushHistory(text)
+			
+			Window:DisableEntry()
+			
+			if not command then
+				Window:AddLine(errorCode)
+			end
+			
+			local ok, out = xpcall(function()
+				local valid, xpcallerrorText = command:Validate(true)
 
-		Window:AddLine(Cmdr.Dispatcher:EvaluateAndRun(text, Player, {
-			IsHuman = true,
-		}))
-		Window:EnableEntry()
+				if not valid then
+					return xpcallerrorText
+				end
+
+				return command:Run() or "Command executed."
+			end, function(value)
+				return debug.traceback(tostring(value))
+			end)
+
+			if not ok then
+				warn((`[Cmdr] Error occurred while evaluating command string %q\n{tostring(out)}`):format(text))
+			end
+			
+			local line_2 = ok and out or "An error occurred while running this command. Check the console for more information."
+			
+			line.Text = line_2
+			line.TextColor3 = Color3.fromRGB(255, 255, 255)
+			
+			Window:EnableEntry()
+		else
+			line.Text = Cmdr.Dispatcher:EvaluateAndRun(text, Player, {
+				IsHuman = true,
+			})
+			
+			line.TextColor3 = Color3.fromRGB(255, 255, 255)
+		end
 	end
 
 	-- Sets the Window.OnTextChanged callback so we can update the auto complete

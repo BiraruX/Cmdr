@@ -161,6 +161,7 @@ function Window:EnableEntry()
 	self.EntryAllowed = true
 
 	if self:IsVisible() then
+		self:UpdateLabel()
 		Entry.TextBox:CaptureFocus()
 	end
 end

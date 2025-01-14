@@ -188,13 +188,15 @@ function Window:LoseFocus(submit)
 	elseif GuiService.MenuIsOpen and Gui.Visible then
 		self:Hide()
 	end
-
-	if submit and self.Valid and self.EntryAllowed then
-		task.wait()
-		self:SetEntryText("")
-		self.ProcessEntry(text)
-	elseif submit then
-		self:AddLine(self._errorText, Color3.fromRGB(255, 153, 153))
+	
+	if self.EntryAllowed then
+		if submit and self.Valid then
+			task.wait()
+			self:SetEntryText("")
+			self.ProcessEntry(text)
+		elseif submit then
+			self:AddLine(self._errorText, Color3.fromRGB(255, 153, 153))
+		end
 	end
 end
 
@@ -284,7 +286,7 @@ function Window:BeginInput(input, gameProcessed)
 		self:SelectVertical(1)
 	elseif input.KeyCode == Enum.KeyCode.Up then -- Auto Complete Up
 		self:SelectVertical(-1)
-	elseif input.KeyCode == Enum.KeyCode.Return then -- Eat new lines
+	elseif input.KeyCode == Enum.KeyCode.Return and self.EntryAllowed then -- Eat new lines
 		task.wait()
 		self:SetEntryText(self:GetEntryText():gsub("\n", ""):gsub("\r", ""))
 	elseif input.KeyCode == Enum.KeyCode.Tab then -- Auto complete

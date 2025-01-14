@@ -3,11 +3,15 @@
   "tree": {
     "$className": "DataModel",
     "$ignoreUnknownInstances": true,
-    "ServerScriptService": {
-      "$className": "ServerScriptService",
+    "ReplicatedStorage": {
+      "$className": "ReplicatedStorage",
 
-      "Cmdr": {
+      "Modules": {
+        "$className": "Folder",
+
+        "Cmdr": {
         "$path": "./Cmdr"
+        }
       }
     }
   }

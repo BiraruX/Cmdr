@@ -1,6 +1,6 @@
-title = "Cmdr"
-gitRepoUrl = "https://github.com/evaera/cmdr"
-gitSourceBranch = "master"
+title = "CmdrX"
+gitRepoUrl = "https://github.com/BiraruX/CmdrX"
+gitSourceBranch = "main"
 changelog = true
 
 classOrder = [
@@ -16,13 +16,12 @@ classOrder = [
 ]
 
 [docusaurus]
-organizationName = "evaera"
-projectName = "Cmdr"
+organizationName = "BiraruX"
+projectName = "CmdrX"
 deploymentBranch = "gh-pages"
-tagline = "The extensible command console for Roblox developers"
+tagline = "Extensible command console for Roblox developers. This fork was made to add small use cases that 'arent fit for production code'"
 titleDelimiter = "•"
 
-url = "https://eryn.io"
 baseUrl = "/Cmdr/beta/"
 
 # TODO: Remove when releasing new website
@@ -36,11 +35,11 @@ includeReadme = false
 title = ""
 
 [navbar.logo]
-alt = "Cmdr"
+alt = "CmdrX"
 src = "/logo.png"
 
 [[navbar.items]]
-href = "https://github.com/evaera/cmdr/releases"
+href = "https://github.com/BiraruX/CmdrX/releases"
 label = "Releases"
 position = "right"
 
@@ -50,7 +49,7 @@ label = "Discord"
 position = "right"
 
 [footer]
-copyright = "Built using Docusaurus and Moonwave. Released under the <a href=\"https://github.com/evaera/Cmdr/blob/master/LICENSE\" target=\"_blank\">MIT License</a>."
+copyright = "Built using Docusaurus and Moonwave. Released under the <a href=\"https://github.com/BiraruX/CmdrX/blob/master/LICENSE\" target=\"_blank\">MIT License</a>."
 
 [[footer.links]]
 title = "Learn"
@@ -80,4 +79,4 @@ label = "Discord"
 href = "https://discord.gg/g5PdMxh"
 [[footer.links.items]]
 label = "Bug tracker"
-href = "https://github.com/evaera/Cmdr/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc"
+href = "https://github.com/BiraruX/CmdrX/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc"

@@ -16,6 +16,7 @@ local Window = {
 	OnTextChanged = nil,
 	Cmdr = nil,
 	HistoryState = nil,
+	EntryAllowed = true,
 }
 
 local Gui = Player:WaitForChild("PlayerGui"):WaitForChild("Cmdr"):WaitForChild("Frame")
@@ -65,6 +66,8 @@ function Window:AddLine(text, options)
 	line.TextColor3 = options.Color or line.TextColor3
 	line.RichText = options.RichText or false
 	line.Parent = Gui
+
+	return line
 end
 
 -- Returns if the command bar is visible
@@ -152,6 +155,26 @@ function Window:HideInvalidState()
 	Entry.TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
 end
 
+function Window:EnableEntry()
+	Entry.Visible = true
+	Window:UpdateWindowHeight()
+	self.EntryAllowed = true
+
+	if self:IsVisible() then
+		Entry.TextBox:CaptureFocus()
+	end
+end
+
+function Window:DisableEntry()
+	Entry.Visible = false
+	Window:UpdateWindowHeight()
+	self.EntryAllowed = false
+
+	if self:IsVisible() then
+		Entry.TextBox:CaptureFocus()
+	end
+end
+
 -- Event handler for text box focus lost
 function Window:LoseFocus(submit)
 	local text = Entry.TextBox.Text
@@ -165,8 +188,8 @@ function Window:LoseFocus(submit)
 		self:Hide()
 	end
 
-	if submit and self.Valid then
-		wait()
+	if submit and self.Valid and self.EntryAllowed then
+		task.wait()
 		self:SetEntryText("")
 		self.ProcessEntry(text)
 	elseif submit then
@@ -230,7 +253,7 @@ function Window:BeginInput(input, gameProcessed)
 			lastPressTime = tick()
 		elseif self.Cmdr.Enabled then
 			self:SetVisible(not self:IsVisible())
-			wait()
+			task.wait()
 			self:SetEntryText("")
 
 			if GuiService.MenuIsOpen then -- Special case for menu getting stuck open (roblox bug)
@@ -261,7 +284,7 @@ function Window:BeginInput(input, gameProcessed)
 	elseif input.KeyCode == Enum.KeyCode.Up then -- Auto Complete Up
 		self:SelectVertical(-1)
 	elseif input.KeyCode == Enum.KeyCode.Return then -- Eat new lines
-		wait()
+		task.wait()
 		self:SetEntryText(self:GetEntryText():gsub("\n", ""):gsub("\r", ""))
 	elseif input.KeyCode == Enum.KeyCode.Tab then -- Auto complete
 		local item = self.AutoComplete:GetSelectedItem()
@@ -304,12 +327,12 @@ function Window:BeginInput(input, gameProcessed)
 				newText = replace
 			end
 			-- need to wait a frame so we can eat the \t
-			wait()
+			task.wait()
 			-- Update the text box
 			self:SetEntryText(newText .. (insertSpace and " " or ""))
 		else
 			-- Still need to eat the \t even if there is no auto-complete to show
-			wait()
+			task.wait()
 			self:SetEntryText(self:GetEntryText())
 		end
 	else

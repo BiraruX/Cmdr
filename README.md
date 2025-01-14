@@ -1,13 +1,13 @@
 <div align="center">
-	<img src="assets/logo.png" alt="Cmdr" height="150" />
+	<img src="assets/logo.png" alt="CmdrX" height="150" />
 	<br/>
 	<a href="https://discord.gg/g5PdMxh"><img src="https://img.shields.io/discord/425800792679645204.svg?label=discord" /></a>
-	<p><a href="https://eryn.io/Cmdr/">View Docs</a></p>
+	<p><a href="https://github.com/BiraruX/CmdrX">View Docs</a></p>
 </div>
 
 <!--moonwave-hide-before-this-line-->
 
-**Cmdr** is a fully extensible and type safe command console for Roblox developers.
+**CmdrX** is a fully extensible and type safe command console for Roblox developers.
 
 - Great for admin commands, but does much more.
 - Make commands that tie in specifically with your game systems.

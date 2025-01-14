@@ -71,7 +71,7 @@ do
 		MashToEnable = false,
 		ActivationUnlocksMouse = false,
 		HideOnLostFocus = true,
-		PlaceName = "Cmdr",
+		PlaceName = "CmdrX",
 		Util = Util,
 		Events = {},
 	}, {

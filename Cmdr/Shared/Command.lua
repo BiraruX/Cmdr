@@ -24,6 +24,7 @@ function Command.new(options)
 		Dispatcher = options.Dispatcher, -- The dispatcher that created this command context
 		Cmdr = options.Dispatcher.Cmdr, -- A quick reference to Cmdr for command context
 		Name = options.CommandObject.Name, -- The command name (not alias)
+		Entry = options.CommandObject.Entry, -- If the command does'nt makes the command line wait
 		RawText = options.Text, -- The raw text used to trigger this command
 		Object = options.CommandObject, -- The command object (definition)
 		Group = options.CommandObject.Group, -- The group this command is in

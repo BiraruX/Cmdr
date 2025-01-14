@@ -12,7 +12,7 @@ function Hero() {
   return (
     <header className={styles.heroBanner}>
       <div className="container">
-        <h1 className="hero__title">Cmdr</h1>
+        <h1 className="hero__title">CmdrX</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
@@ -51,7 +51,7 @@ export default function Home() {
       <main>
         <div className="container">
           <Admonition type="info" title="Beta">
-            This website is a new service and <a href="https://github.com/evaera/Cmdr/issues/new?assignees=&labels=scope%3Aixp&projects=&template=websitefeedback.md" target="_blank">your feedback</a> will help improve it. In the mean time, you may find it helpful to refer to <a href="https://eryn.io/Cmdr" target="_blank">the current documentation</a>.
+            This website is a new service and <a href="https://github.com/BiraruX/CmdrX/issues/new?assignees=&labels=scope%3Aixp&projects=&template=websitefeedback.md" target="_blank">your feedback</a> will help improve it. In the mean time, you may find it helpful to refer to <a href="https://github.com/BiraruX/CmdrX" target="_blank">the current documentation</a>.
           </Admonition>
 
           <section className={styles.featuresOuter}>

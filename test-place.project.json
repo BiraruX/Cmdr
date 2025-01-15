@@ -1,18 +1,18 @@
 {
-  "name": "Cmdr",
-  "tree": {
-    "$className": "DataModel",
-    "$ignoreUnknownInstances": true,
-    "ReplicatedStorage": {
-      "$className": "ReplicatedStorage",
+    "name": "Cmdr",
+    "tree": {
+        "$className": "DataModel",
+        "$ignoreUnknownInstances": true,
+        "ReplicatedStorage": {
+            "$className": "ReplicatedStorage",
 
-      "Modules": {
-        "$className": "Folder",
+            "Modules": {
+                "$className": "Folder",
 
-        "Cmdr": {
-        "$path": "./Cmdr"
+                "Cmdr": {
+                    "$path": "./Cmdr"
+                }
+            }
         }
-      }
     }
-  }
 }

@@ -1,6 +1,6 @@
 {
 	"name": "Cmdr",
 	"tree": {
-		"$path": "Cmdr"
+		"$path": "./Cmdr"
 	}
 }

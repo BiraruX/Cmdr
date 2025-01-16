@@ -1,10 +1,14 @@
 local Players = game:GetService("Players")
 
 return function (_, players)
-	Players:UnbanAsync({
+	local response = Players:UnbanAsync({
 		UserIds = players,
 		ApplyToUniverse = true,
 	})
 
-	return ("Unbanned %d players."):format(#players)
+	if response then
+		return response
+	end
+
+	return if #players <= 2 then `Unbanned {#players} players` else `Unbanned {#players} player` 
 end

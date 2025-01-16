@@ -1,7 +1,7 @@
 local Players = game:GetService("Players")
 
 return function (_, players, reason, privateReason, excludeAltAccounts)
-	Players:BanAsync({
+	local response = Players:BanAsync({
 		UserIds = players,
 		Duration = -1,
 		DisplayReason = reason,
@@ -10,5 +10,9 @@ return function (_, players, reason, privateReason, excludeAltAccounts)
 		ApplyToUniverse = true,
 	})
 
-	return ("Banned %d players."):format(#players)
+	if response then
+		return response
+	end
+
+	return if #players <= 2 then `Banned {#players} players` else `Banned {#players} player` 
 end

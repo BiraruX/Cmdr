@@ -5,7 +5,7 @@ return function (_, players, duration, reason, privateReason, excludeAltAccounts
 		return "Invalid duration."
 	end
 
-	Players:BanAsync({
+	local response = Players:BanAsync({
 		UserIds = players,
 		Duration = duration,
 		DisplayReason = reason,
@@ -14,5 +14,9 @@ return function (_, players, duration, reason, privateReason, excludeAltAccounts
 		ApplyToUniverse = true,
 	})
 
-	return ("Temporarily banned %d players."):format(#players)
+	if response then
+		return response
+	end
+
+	return if #players <= 2 then `Tempbanned {#players} players` else `Tempbanned {#players} player` 
 end

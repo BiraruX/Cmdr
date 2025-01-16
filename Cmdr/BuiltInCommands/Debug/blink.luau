@@ -33,24 +33,27 @@ return {
 
 		local playerGui = context.Executor.PlayerGui
 
-		local blinkGUI = Instance.new("ScreenGui", playerGui)
+		local blinkGUI = Instance.new("ScreenGui")
 		blinkGUI.Name = "BlinkGUI"
 		blinkGUI.IgnoreGuiInset = true
 		blinkGUI.ResetOnSpawn = false
+		blinkGUI.Parent = playerGui
 
-		local upper = Instance.new("Frame", blinkGUI)
+		local upper = Instance.new("Frame")
 		upper.Name = "Upper"
 		upper.AnchorPoint = Vector2.new(0.5, 0)
 		upper.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 		upper.Position = UDim2.fromScale(0.5, -0.5)
 		upper.Size = UDim2.fromScale(1, 0.5)
+		upper.Parent = blinkGUI
 
-		local lower = Instance.new("Frame", blinkGUI)
+		local lower = Instance.new("Frame")
 		lower.Name = "Lower"
 		lower.AnchorPoint = Vector2.new(0.5, 0)
 		lower.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 		lower.Position = UDim2.fromScale(0.5, 1)
 		lower.Size = UDim2.fromScale(1, 0.5)
+		lower.Parent = blinkGUI
 
 		local tweenInfo = TweenInfo.new(0.15, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, true)
 		local upperTween, lowerTween = TweenService:Create(upper, tweenInfo, {Position = UDim2.fromScale(0.5, 0)}), TweenService:Create(lower, tweenInfo, {Position = UDim2.fromScale(0.5, 0.5)})

@@ -110,8 +110,8 @@ return function(Cmdr)
 		Gui.ScrollBarThickness = 0
 
 		for i, item in pairs(self.Items) do
-			local leftText = item[1]
-			local rightText = item[2]
+			local leftText = item.typedText
+			local rightText = item.command
 
 			local btn = AutoItem:Clone()
 			btn.Name = leftText .. rightText

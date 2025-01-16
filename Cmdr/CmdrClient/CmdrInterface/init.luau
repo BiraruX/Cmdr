@@ -11,7 +11,6 @@ return function(Cmdr)
 		"UserAlias",
 	}
 
-	local Dispatcher = Cmdr.Dispatcher
 	local Util = Cmdr.Util
 
 	local Window = require(script:WaitForChild("Window"))
@@ -28,14 +27,14 @@ return function(Cmdr)
 			return
 		end
 
-		local command, errorCode = Dispatcher:Evaluate(text, Player)
+		local command, errorCode = Cmdr.Dispatcher:Evaluate(text, Player)
 
 		Window:AddLine(Window:GetLabel() .. " " .. text, Color3.fromRGB(255, 223, 93))
 
 		local line = Window:AddLine("Processing...", Color3.fromRGB(200, 200, 200))
 
 		if not command.Entry and not table.find(DefaultGroups, command.Group) then
-			Dispatcher:PushHistory(text)
+			Cmdr.Dispatcher:PushHistory(text)
 
 			Window:DisableEntry()
 
@@ -150,8 +149,8 @@ return function(Cmdr)
 			local exactMatch
 			if exactCommand then
 				exactMatch = {
-					exactCommand.Name,
-					exactCommand.Name,
+					typedText = exactCommand.Name,
+					command = exactCommand.Name,
 					options = {
 						name = exactCommand.Name,
 						description = exactCommand.Description,
@@ -181,17 +180,19 @@ return function(Cmdr)
 			for _, cmd in pairs(Cmdr.Registry:GetCommandNames()) do
 				if
 					commandText:lower() == cmd:lower():sub(1, #commandText)
-					and (exactMatch == nil or exactMatch[1] ~= commandText)
+					and (exactMatch == nil or exactMatch.typedText ~= commandText)
 				then
 					local commandObject = Cmdr.Registry:GetCommand(cmd)
-					acItems[#acItems + 1] = {
-						commandText,
-						cmd,
+					local tempTable = {
+						typedText = commandText,
+						command = cmd,
 						options = {
 							name = commandObject.Name,
 							description = commandObject.Description,
 						},
 					}
+
+					table.insert(acItems, tempTable)
 				end
 			end
 

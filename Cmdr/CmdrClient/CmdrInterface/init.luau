@@ -149,8 +149,8 @@ return function(Cmdr)
 			local exactMatch
 			if exactCommand then
 				exactMatch = {
-					exactCommand.Name,
-					exactCommand.Name,
+					typedText = exactCommand.Name,
+					command = exactCommand.Name,
 					options = {
 						name = exactCommand.Name,
 						description = exactCommand.Description,
@@ -180,17 +180,19 @@ return function(Cmdr)
 			for _, cmd in pairs(Cmdr.Registry:GetCommandNames()) do
 				if
 					commandText:lower() == cmd:lower():sub(1, #commandText)
-					and (exactMatch == nil or exactMatch[1] ~= commandText)
+					and (exactMatch == nil or exactMatch.typedText ~= commandText)
 				then
 					local commandObject = Cmdr.Registry:GetCommand(cmd)
-					acItems[#acItems + 1] = {
-						commandText,
-						cmd,
+					local tempTable = {
+						typedText = commandText,
+						command = cmd,
 						options = {
 							name = commandObject.Name,
 							description = commandObject.Description,
 						},
 					}
+
+					table.insert(acItems, tempTable)
 				end
 			end
 

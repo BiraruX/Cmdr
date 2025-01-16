@@ -56,7 +56,9 @@ return {
 		lower.Parent = blinkGUI
 
 		local tweenInfo = TweenInfo.new(0.15, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, true)
-		local upperTween, lowerTween = TweenService:Create(upper, tweenInfo, {Position = UDim2.fromScale(0.5, 0)}), TweenService:Create(lower, tweenInfo, {Position = UDim2.fromScale(0.5, 0.5)})
+		local upperTween, lowerTween =
+			TweenService:Create(upper, tweenInfo, { Position = UDim2.fromScale(0.5, 0) }),
+			TweenService:Create(lower, tweenInfo, { Position = UDim2.fromScale(0.5, 0.5) })
 
 		character:AddTag("RayBlacklist")
 

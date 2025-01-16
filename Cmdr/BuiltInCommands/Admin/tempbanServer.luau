@@ -1,6 +1,6 @@
 local Players = game:GetService("Players")
 
-return function (_, players, duration, reason, privateReason, excludeAltAccounts)
+return function(_, players, duration, reason, privateReason, excludeAltAccounts)
 	if duration <= 0 then
 		return "Invalid duration."
 	end
@@ -18,5 +18,5 @@ return function (_, players, duration, reason, privateReason, excludeAltAccounts
 		return response
 	end
 
-	return if #players <= 2 then `Tempbanned {#players} players` else `Tempbanned {#players} player` 
+	return if #players <= 2 then `Tempbanned {#players} players` else `Tempbanned {#players} player`
 end

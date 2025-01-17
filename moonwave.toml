@@ -5,7 +5,7 @@ changelog = true
 
 classOrder = [
   "CmdrX",
-  "CmdrClient",
+  "CmdrXClient",
 
   "Registry",
   "Dispatcher",

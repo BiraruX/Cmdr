@@ -21,8 +21,10 @@ projectName = "CmdrX"
 deploymentBranch = "gh-pages"
 tagline = "Extensible command console for Roblox developers. This fork was made to add small use cases that 'arent fit for production code'"
 titleDelimiter = "•"
+onBrokenLinks = "throw"
+onBrokenMarkdownLinks = "warn"
 
-baseUrl = "/CmdrX/"
+baseUrl = "/"
 
 # TODO: Remove when releasing new website
 noIndex = true

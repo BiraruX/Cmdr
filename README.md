@@ -21,5 +21,5 @@
 		<li>Secure: the client and server both validate input separately.</li>
 		<li>Embedded commands: dynamically use the output of an inner command when running a command.</li>
 	</ul>
-	<p><strong>This project is a fork of Cmdr by Eryn L. K. The both projects are licensed under the MIT License.</strong></p>
+	<p><strong>This project is a fork of Cmdr by Eryn L. K. Both projects are licensed under the MIT License.</strong></p>
 </div>

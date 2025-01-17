@@ -1,22 +1,25 @@
 <div align="center">
-	<img src="assets/logo.png" alt="CmdrX" height="150" />
+	<table>
+		<tr>
+			<td>
+				<img src="assets/name.png" alt="CmdrX" />
+			</td>
+			<td>
+				<img alt="Dynamic JSON Badge" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscord.com%2Fapi%2Finvites%2FKTbpAEhWsf%3Fwith_counts%3Dtrue&query=approximate_presence_count&style=for-the-badge&logo=discord&label=Discord&labelColor=grey&color=%235539cc"/>
+				<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/birarux/cmdr?style=for-the-badge&logo=Github&label=Github%20Stars&color=%2324292e">
+			</td>
+		</tr>
+	</table>
 	<br/>
-	<a href="https://discord.gg/g5PdMxh"><img src="https://img.shields.io/discord/425800792679645204.svg?label=discord" /></a>
-	<p><a href="https://github.com/BiraruX/CmdrX">View Docs</a></p>
+	<p><strong>CmdrX</strong> is a fully extensible and type-safe command console for Roblox developers.</p>
+	<ul>
+		<li>Great for admin commands, but does much more.</li>
+		<li>Make commands that tie in specifically with your game systems.</li>
+		<li>Intelligent autocompletion and instant validation.</li>
+		<li>Run commands programmatically on behalf of the local user.</li>
+		<li>Bind commands to user input.</li>
+		<li>Secure: the client and server both validate input separately.</li>
+		<li>Embedded commands: dynamically use the output of an inner command when running a command.</li>
+	</ul>
+	<p><strong>This project is a fork of Cmdr by Eryn L. K. The both projects are licensed under the MIT License.</strong></p>
 </div>
-
-<!--moonwave-hide-before-this-line-->
-
-**CmdrX** is a fully extensible and type safe command console for Roblox developers.
-
-- Great for admin commands, but does much more.
-- Make commands that tie in specifically with your game systems.
-- Intelligent autocompletion and instant validation.
-- Run commands programmatically on behalf of the local user.
-- Bind commands to user input.
-- Secure: the client and server both validate input separately.
-- Embedded commands: dynamically use the output of an inner command when running a command.
-
-<p align="center">
-  <a href="https://giant.gfycat.com/HatefulTanAzurewingedmagpie.mp4"><img src="https://thumbs.gfycat.com/HatefulTanAzurewingedmagpie-size_restricted.gif" alt="Demo video" /></a>
-</p>

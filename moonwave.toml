@@ -4,8 +4,8 @@ gitSourceBranch = "main"
 changelog = true
 
 classOrder = [
-  "Cmdr",
-  "CmdrClient",
+  "CmdrX",
+  "CmdrXClient",
 
   "Registry",
   "Dispatcher",
@@ -21,8 +21,10 @@ projectName = "CmdrX"
 deploymentBranch = "gh-pages"
 tagline = "Extensible command console for Roblox developers. This fork was made to add small use cases that 'arent fit for production code'"
 titleDelimiter = "•"
+onBrokenLinks = "throw"
+onBrokenMarkdownLinks = "warn"
 
-baseUrl = "/Cmdr/beta/"
+baseUrl = "/"
 
 # TODO: Remove when releasing new website
 noIndex = true
@@ -36,7 +38,7 @@ title = ""
 
 [navbar.logo]
 alt = "CmdrX"
-src = "/logo.png"
+src = "/name.png"
 
 [[navbar.items]]
 href = "https://github.com/BiraruX/CmdrX/releases"
@@ -44,12 +46,12 @@ label = "Releases"
 position = "right"
 
 [[navbar.items]]
-href = "https://discord.gg/g5PdMxh"
+href = "https://discord.gg/KTbpAEhWsf"
 label = "Discord"
 position = "right"
 
 [footer]
-copyright = "Built using Docusaurus and Moonwave. Released under the <a href=\"https://github.com/BiraruX/CmdrX/blob/master/LICENSE\" target=\"_blank\">MIT License</a>."
+copyright = "Made by Evaera, Modified by BiraruX. Licensed under MIT License"
 
 [[footer.links]]
 title = "Learn"
@@ -61,7 +63,7 @@ label = "Best practice"
 href = "/docs/advanced/bestpractice"
 [[footer.links.items]]
 label = "API reference"
-href = "/api/Cmdr"
+href = "/api/CmdrX"
 [[footer.links.items]]
 label = "Changelog"
 href = "/changelog"
@@ -76,7 +78,7 @@ label = "Security"
 href = "/docs/community/securityreport"
 [[footer.links.items]]
 label = "Discord"
-href = "https://discord.gg/g5PdMxh"
+href = "https://discord.gg/KTbpAEhWsf"
 [[footer.links.items]]
 label = "Bug tracker"
 href = "https://github.com/BiraruX/CmdrX/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc"

@@ -1,5 +1,20 @@
 # Changelog
 
+## v1.13.0
+
+- Update BETA Website
+- Change Cmdr Into CmdrX
+- Add Relative Vector3 Type
+- Update Thru To Ignore Non-Collidable Parts
+- Add Blink Animation For Blink Command
+- Support Player Display Names As Player Argument
+- Add Commands For Roblox Ban API
+- Fix Delayed Command/Type Registration
+
+## v1.12.0-biraru
+
+- Temporary Release
+
 ## v1.12.0
 
 - Add `convertTimestamp` default command, outputs a human-readable timestamp from epoch seconds

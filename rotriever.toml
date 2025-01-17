@@ -1,6 +1,6 @@
 [package]
 name = "BiraruX/CmdrX"
 author = "BiraruX"
-content_root = "Cmdr"
+content_root = "CmdrX"
 version = "1.13.0"
 license = "MIT"

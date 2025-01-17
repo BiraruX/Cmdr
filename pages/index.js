@@ -51,31 +51,31 @@ export default function Home() {
       <main>
         <div className="container">
           <Admonition type="info" title="Beta">
-            This website is a new service and <a href="https://github.com/BiraruX/CmdrX/issues/new?assignees=&labels=scope%3Aixp&projects=&template=websitefeedback.md" target="_blank">your feedback</a> will help improve it. In the mean time, you may find it helpful to refer to <a href="https://github.com/BiraruX/CmdrX" target="_blank">the current documentation</a>.
+            This website is a new service and <a href="https://github.com/BiraruX/CmdrX/issues/new?assignees=&labels=scope%3Aixp&projects=&template=websitefeedback.md" target="_blank">your feedback</a> will help improve it.
           </Admonition>
 
           <section className={styles.featuresOuter}>
             <div className={styles.featuresInner}>
-              <Feature title="Integrates with your systems" description="Cmdr stays out of the way, making it easy to write your own commands which plug-in to your systems. Help debug your game by triggering events or printing useful data." />
+              <Feature title="Integrates with your systems" description="CmdrX stays out of the way, making it easy to write your own commands which plug-in to your systems. Help debug your game by triggering events or printing useful data." />
               <Feature title="Type-safe with intelligent autocomplete" description="Discover commands and possible values for arguments naturally with context-aware autocomplete. Arguments are strictly typed and validated for you, keeping typos at bay." />
-              <Feature title="Powerful and extensible" description="Cmdr ships with optional built-in commands but you can register your own commands and types. Meta-commands like bind and alias make it possible to extend Cmdr even further." />
+              <Feature title="Powerful and extensible" description="CmdrX ships with optional built-in commands but you can register your own commands and types. Meta-commands like bind and alias make it possible to extend CmdrX even further." />
             </div>
           </section>
 
           <p className={styles.paragraphs}>
-            While Cmdr was originally designed to make debugging easier, Cmdr has been popularised as a general console and command system due to its powerful features and extensible nature. Of course, you don't need to use it for debugging; Cmdr can be used in whatever way works for you
+            While CmdrX was originally designed to make debugging easier, CmdrX has been popularised as a general console and command system due to its powerful features and extensible nature. Of course, you don't need to use it for debugging; CmdrX can be used in whatever way works for you
           </p>
 
           <p className={styles.paragraphs}>
-            Cmdr provides a friendly API that lets developers choose how they want Cmdr to work, to register their own commands, choose a different key bind for activating the console, or even disable Cmdr altogether.
+            CmdrX provides a friendly API that lets developers choose how they want CmdrX to work, to register their own commands, choose a different key bind for activating the console, or even disable CmdrX altogether.
           </p>
 
           <p className={styles.paragraphs}>
-            Cmdr has a robust and friendly type validation system which gives users real-time feedback as they type. By the time the command actually gets to your code, you can be assured that all of the arguments are present and of the correct type, keeping both typos and exploiters at bay.
+            CmdrX has a robust and friendly type validation system which gives users real-time feedback as they type. By the time the command actually gets to your code, you can be assured that all of the arguments are present and of the correct type, keeping both typos and exploiters at bay.
           </p>
 
           <p className={styles.paragraphs}>
-            Cmdr has been around for over five years and is trusted in games with billions of visits earning millions of dollars worth of revenue. <Link to="/docs/intro#why-should-i-use-it">Tell me more →</Link>
+            CmdrX has been around for over five years and is trusted in games with billions of visits earning millions of dollars worth of revenue. <Link to="/docs/intro#why-should-i-use-it">Tell me more →</Link>
           </p>
         </div>
       </main>

@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.13.0
+
+- In Progress
+
+## v1.12.0-biraru
+
+- Temporary Release
+
 ## v1.12.0
 
 - Add `convertTimestamp` default command, outputs a human-readable timestamp from epoch seconds

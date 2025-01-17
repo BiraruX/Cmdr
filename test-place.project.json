@@ -1,5 +1,5 @@
 {
-    "name": "Cmdr",
+    "name": "CmdrX",
     "tree": {
         "$className": "DataModel",
         "$ignoreUnknownInstances": true,
@@ -9,8 +9,8 @@
             "Modules": {
                 "$className": "Folder",
 
-                "Cmdr": {
-                    "$path": "./Cmdr"
+                "CmdrX": {
+                    "$path": "./CmdrX"
                 }
             }
         }

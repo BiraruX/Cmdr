@@ -4,7 +4,7 @@
 			<td>
 				<img src="assets/name.png" alt="CmdrX" />
 			</td>
-			<td>
+			<td align="center">
 				<img alt="Dynamic JSON Badge" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscord.com%2Fapi%2Finvites%2FKTbpAEhWsf%3Fwith_counts%3Dtrue&query=approximate_presence_count&style=for-the-badge&logo=discord&label=Discord&labelColor=grey&color=%235539cc"/>
 				<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/birarux/cmdr?style=for-the-badge&logo=Github&label=Github%20Stars&color=%2324292e">
 			</td>

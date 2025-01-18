@@ -101,7 +101,7 @@ return function(CmdrX)
 			local acItems = {}
 
 			local lastArgument = command:GetArgument(#arguments)
-			print(lastArgument)
+
 			if lastArgument then
 				local typedText = lastArgument.TextSegmentInProgress
 
@@ -139,8 +139,6 @@ return function(CmdrX)
 				if not atEnd and valid then
 					Window:HideInvalidState()
 				end
-
-				print(acItems)
 
 				return AutoComplete:Show(acItems, {
 					at = atEnd and #text - #typedText + (text:sub(#text, #text):match("%s") and -1 or 0),

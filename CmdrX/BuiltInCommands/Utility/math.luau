@@ -13,6 +13,11 @@ return {
 	},
 	Args = {
 		{
+			Type = "number",
+			Name = "Value",
+			Description = "A number value.",
+		},
+		{
 			Type = "mathOperator",
 			Name = "Operation",
 			Description = "A math operation.",
@@ -22,14 +27,9 @@ return {
 			Name = "Value",
 			Description = "A number value.",
 		},
-		{
-			Type = "number",
-			Name = "Value",
-			Description = "A number value.",
-		},
 	},
 
-	ClientRun = function(_, operation, a, b)
+	ClientRun = function(_, a, operation, b)
 		return operation.Perform(a, b)
 	end,
 }

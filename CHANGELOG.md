@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.13.1
+
+* Remove Debug by BiraruX in https://github.com/BiraruX/CmdrX/commit/d1f339d736fb351db2312e296d29f27aedbe5d68
+* Migrate to TextChatService:CanUsersChatAsync by BiraruX in https://github.com/BiraruX/CmdrX/commit/bcba6aecef3dde1f17b7ad98286215d9b96f67b6
+* Change Math Argument's Arrangement by BiraruX in https://github.com/BiraruX/CmdrX/commit/65772cabd36bb25d3eab3f52d5e957355e904405
+* Add PCalls by BiraruX in https://github.com/BiraruX/CmdrX/commit/2ee08d20b8ecd7ad9d8fdd3af0a6bb97fd5821eb
+
 ## v1.13.0
 
 - Update BETA Website

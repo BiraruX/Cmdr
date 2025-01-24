@@ -1,7 +1,7 @@
 local HttpService = game:GetService("HttpService")
 
 local url = "https://api.github.com/repos/BiraruX/CmdrX/releases/latest"
-local version = "v1.13.0"
+local version = "v1.13.1"
 
 return {
 	Name = "version",

@@ -3,19 +3,21 @@ local Players = game:GetService("Players")
 
 local nameCache = {}
 local function getUserId(name)
-	if nameCache[name] then
-		return nameCache[name]
-	elseif Players:FindFirstChild(name) then
-		nameCache[name] = Players[name].UserId
-		return Players[name].UserId
+	local extractedUsername = name:match("%((.-)%)") or name
+
+	if nameCache[extractedUsername] then
+		return nameCache[extractedUsername]
+	elseif Players:FindFirstChild(extractedUsername) then
+		nameCache[extractedUsername] = Players[extractedUsername].UserId
+		return Players[extractedUsername].UserId
 	else
-		local ok, userid = pcall(Players.GetUserIdFromNameAsync, Players, name)
+		local ok, userid = pcall(Players.GetUserIdFromNameAsync, Players, extractedUsername)
 
 		if not ok then
 			return nil
 		end
 
-		nameCache[name] = userid
+		nameCache[extractedUsername] = userid
 		return userid
 	end
 end

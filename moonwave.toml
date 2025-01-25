@@ -18,16 +18,18 @@ classOrder = [
 [docusaurus]
 organizationName = "BiraruX"
 projectName = "CmdrX"
+url = "https://cmdrx.biraru.org"
 deploymentBranch = "gh-pages"
 tagline = "Extensible command console for Roblox developers. This fork was made to add small use cases that 'arent fit for production code'"
 titleDelimiter = "•"
 onBrokenLinks = "throw"
 onBrokenMarkdownLinks = "warn"
+favicon = "/logo.png"
 
 baseUrl = "/"
 
 # TODO: Remove when releasing new website
-noIndex = true
+# noIndex = true
 
 [home]
 enabled = true

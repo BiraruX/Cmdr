@@ -6,7 +6,7 @@
         "ReplicatedStorage": {
             "$className": "ReplicatedStorage",
 
-            "Modules": {
+            "Libs": {
                 "$className": "Folder",
 
                 "CmdrX": {
